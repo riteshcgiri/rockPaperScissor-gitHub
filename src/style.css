@@ -1,0 +1,115 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../src/items/background.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.option-cont {
+  background: rgba(0, 0, 0, 0.3);
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.rw-25 {
+  min-width: 150px;
+  border: 2px solid rgb(25, 135, 84);
+}
+#countDown {
+  width: 70px;
+  height: 70px;
+  border: 2px solid rgb(25, 135, 84);
+  border-radius: 50%;
+}
+.brd-btm {
+  border-bottom: 2px solid rgb(25, 135, 84);
+}
+.card,
+.btn {
+  border: none !important;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.card, .card .card-footer{
+  border:none;
+  background: transparent !important;
+}
+#play,
+#restart {
+  z-index: 2;
+}
+#play{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	padding-right: 5px;
+	width: 100px;
+	height:100px;
+	font-size:20px ;
+	transform: translateY(40vh);
+	transition: all 0.3s ease-in-out !important;
+}
+
+.card:hover,
+.btn:hover {
+  transform: scale(1.1);
+}
+.option {
+  background: transparent;
+  border: none;
+}
+#roundResult {
+  transition: all 0.5s;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  /* background: rgba(0, 0, 0, 0.8); */
+  background: url(../src/items/bg-2.jpg);
+  /* background-size: cover; */
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  /* flex-direction: column; */
+  color: white;
+  font-weight: bold;
+}
+.round-result {
+  display: none !important;
+}
+.rnd-rslt{
+	margin-bottom: 350px;
+	margin-left: 50px;
+}
+#closeResult {
+  border: none;
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border-radius: 50%;
+  top: 10px;
+  right: 10px;
+  color: white;
+  background: transparent;
+}
+#closeResult:hover {
+  background: rgba(255 255 255 / 70%);
+  color: rgb(25, 135, 84);
+  animation: rot linear 0.2s 0s;
+}
+@keyframes rot {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
